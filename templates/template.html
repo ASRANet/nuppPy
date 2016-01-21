@@ -50,7 +50,7 @@
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
                         <li class="active"><a href="{% url 'index' %}">Home</a></li>
-                        <li><a href="/static/NUPP%202a.pdf" target="_blank">Call For Papers</a></li>
+                        <li><a href="NUPP%202a.pdf" target="_blank">Call For Papers</a></li>
                         <li><a href="{% url 'register' %}">Register</a></li>
                         <li><a href="{% url 'uploadAbstract' %}">Upload Abstract</a></li>
                         <li><a href={% url 'travel' %}>Travel</a></li>
@@ -65,11 +65,22 @@
     </div>
 </div>
 
-<div style="padding-top: 10%">
 
-        <h1>You are officially registered for NUPP 2017. Thank you.</h1>
+{{ insertedHTML }}
 
-</div>
+
+    <!-- FOOTER -->
+    <footer>
+        <p class="pull-right"><a href="#">Back to top</a></p>
+        <p>&copy; 2016 - ASRANet &middot; <a href="index.html">Privacy</a> &middot; <a href="#">Terms</a></p>
+    </footer>
+
+</div><!-- /.container -->
+
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
 
 </body>
 
@@ -78,7 +89,7 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
         integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
         crossorigin="anonymous"></script>
-<script src="/static/script.js"></script>
-<script src="/static/homeScript.js"></script>
+<script src="Scripts/script.js"></script>
+<script src="Scripts/homeScript.js"></script>
 
 </html>

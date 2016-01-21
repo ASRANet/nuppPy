@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '2kklsn#&_osq5!p&w-69y4qz!r-t*a!1v5)p*ni0$k7ckk@ls4'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['.nuclearpowerplantconference.com']
 
 
 # Application definition

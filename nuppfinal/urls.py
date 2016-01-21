@@ -20,10 +20,15 @@ from nuppfinal import views
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^$', include('index.urls')),
+    url(r'^venue/', 'nuppfinal.views.venue', name='venue'),
+    url(r'^accomodation/', 'nuppfinal.views.accomodation', name='accomodation'),
+    url(r'^contactus/', 'nuppfinal.views.contactus', name='contactus'),
+    url(r'^travel/', 'nuppfinal.views.travel', name='travel'),
     url(r'^register/', include('register.urls')),
     url(r'^uploadAbstract/', include('uploadAbstract.urls')),
-]
+    url(r'^$', 'nuppfinal.views.index', name='index'),
+
+                       ]
 
 if settings.DEBUG:
     urlpatterns += patterns(

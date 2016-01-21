@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,7 +9,7 @@
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
 
-    <title>Accomodation - NUPP 2017</title>
+    <title>NUPP 2017</title>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
           integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
@@ -22,11 +21,17 @@
     <![endif]-->
 
     <!-- Custom styles for this template -->
-    <link href="styles.css" rel="stylesheet">
+    <link href="/static/styles.css" rel="stylesheet">
+
+    <!-- Fonts-->
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:500' rel='stylesheet' type='text/css'>
 
 </head>
-<body style="height: 100%">
-
+<!-- NAVBAR
+================================================== -->
+<body data-spy="scroll" data-target="#sidebar" data-offset="150">
 <div class="navbar-wrapper">
     <div class="container">
 
@@ -40,18 +45,18 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="../register/register.html">NUPP 2017</a>
+                    <a class="navbar-brand" href="{% url 'index' %}">NUPP 2017</a>
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <li><a href="../register/register.html">Home</a></li>
-                        <li><a href="NUPP%202a.pdf" target="_blank">Call For Papers</a></li>
-                        <li><a href="../register/register.html">Register</a></li>
-                        <li><a href="uploadAbstract.html">Upload Abstract</a></li>
-                        <li><a href="travel.html">Travel</a></li>
-                        <li class="active"><a href="accomodation.html">Accommodation</a></li>
-                        <li><a href="venue.html">Venue</a></li>
-                        <li><a href="contactUs.html">Contact Us</a></li>
+                        <li class="active"><a href="{% url 'index' %}">Home</a></li>
+                        <li><a href="/static/NUPP%202a.pdf" target="_blank">Call For Papers</a></li>
+                        <li><a href="{% url 'register' %}">Register</a></li>
+                        <li><a href="{% url 'uploadAbstract' %}">Upload Abstract</a></li>
+                        <li><a href={% url 'travel' %}>Travel</a></li>
+                        <li><a href={% url 'accomodation' %}>Accommodation</a></li>
+                        <li><a href={% url 'venue' %}>Venue</a></li>
+                        <li><a href={% url 'contactus' %}>Contact Us</a></li>
                     </ul>
                 </div>
             </div>
@@ -65,7 +70,7 @@
     <h2 class="featurette-heading" id="averagePrices">Average Hotel Prices</h2>
 
     <!--Change to Croydon specific prices if possible.-->
-    <p class="lead">Below are the average prices per person per night for hotels in London.</p>
+    <p class="lead">Below are the average prices per person per night for hotels in Croydon.</p>
 
         <table class="table col-md-12">
             <tr>
@@ -73,30 +78,20 @@
                 <th>Average Price</th>
             </tr>
             <tr>
-                <td><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-                    <span class="glyphicon glyphicon-star" aria-hidden="true"></span></td>
-                <td>£72</td>
+                <td>Jury's Inn</td>
+                <td>From £48</td>
             </tr>
             <tr>
-                <td><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-                    <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-                    <span class="glyphicon glyphicon-star" aria-hidden="true"></span></td>
-                <td>£89</td>
+                <td>The Lansdowne Hotel</td>
+                <td>From £60</td>
             </tr>
             <tr>
-                <td><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-                    <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-                    <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-                    <span class="glyphicon glyphicon-star" aria-hidden="true"></span></td>
-                <td>£128</td>
+                <td>Travelodge Croydon Central</td>
+                <td>From £43</td>
             </tr>
             <tr>
-                <td><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-                    <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-                    <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-                    <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-                    <span class="glyphicon glyphicon-star" aria-hidden="true"></span></td>
-                <td>£232</td>
+                <td>Hampton by Hilton Croydon</td>
+                <td>From £60</td>
             </tr>
         </table>
 
@@ -105,11 +100,11 @@
 </body>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
         integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
         crossorigin="anonymous"></script>
-<script src="Scripts/script.js"></script>
-
-<script src="Scripts/accomodationScript.js"></script>
+<script src="/static/script.js"></script>
+<script src="/static/homeScript.js"></script>
 
 </html>
