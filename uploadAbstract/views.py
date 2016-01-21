@@ -3,6 +3,7 @@ from django.http import HttpResponse
 from uploadAbstract.models import SubmittedAbstract
 from uploadAbstract.forms import UserForm
 
+
 def index(request):
 
     if request.method == 'POST':
@@ -10,7 +11,6 @@ def index(request):
 
         if form.is_valid():
             form.save(commit=True)
-            handle_uploaded_file(request.FILES['file'])
             return render(request, 'uploadAbstract/successPage.html')
 
         else:

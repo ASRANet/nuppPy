@@ -16,11 +16,13 @@ Including another URLconf
 from django.conf.urls import url, include, patterns
 from django.conf import settings
 from django.contrib import admin
+from nuppfinal import views
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^$', include('index.urls')),
     url(r'^register/', include('register.urls')),
-    url(r'^uploadAbstract/', include('uploadAbstract.urls'), )
+    url(r'^uploadAbstract/', include('uploadAbstract.urls')),
 ]
 
 if settings.DEBUG:
