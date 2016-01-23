@@ -25,7 +25,7 @@ SECRET_KEY = '2kklsn#&_osq5!p&w-69y4qz!r-t*a!1v5)p*ni0$k7ckk@ls4'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['.nuclearpowerplantconference.com']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -54,10 +54,12 @@ MIDDLEWARE_CLASSES = [
 
 ROOT_URLCONF = 'nuppfinal.urls'
 
+basepath = 'nuclearpowerplantconference.com/kunden/homepages/13/d609847479/htdocs/www/www'
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates')]
+        'DIRS': basepath + '/nuppPy/templates'
         ,
         'APP_DIRS': True,
         'OPTIONS': {
@@ -121,7 +123,8 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 
-STATIC_URL = '/static/'
+STATIC_ROOT = basepath + '/static/'
+STATIC_URL = basepath + '/static/'
 
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR,'static'),

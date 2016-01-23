@@ -1,0 +1,11 @@
+AddHandler fcgid-script .fcgi
+RewriteEngine on
+RewriteBase /
+
+# Exclude any paths that should be served literally:
+RewriteRule 	^static/		-			[L,NC]
+# Add a default page
+RewriteRule 	^$			templates/index/index			[NC]
+
+RewriteCond %{REQUEST_FILENAME} !(cgi-bin/nuppfinal.fcgi)
+RewriteRule 	^(.*)$ 			cgi-bin/nuppfinal.fcgi/$1	[QSA,L]
