@@ -16,17 +16,17 @@ Including another URLconf
 from django.conf.urls import url, include, patterns
 from django.conf import settings
 from django.contrib import admin
-from nuppfinal import views
+from nuppFinal import views
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^venue/', 'nuppfinal.views.venue', name='venue'),
-    url(r'^accomodation/', 'nuppfinal.views.accomodation', name='accomodation'),
-    url(r'^contactus/', 'nuppfinal.views.contactus', name='contactus'),
-    url(r'^travel/', 'nuppfinal.views.travel', name='travel'),
+    url(r'^venue/', 'nuppFinal.views.venue', name='venue'),
+    url(r'^accomodation/', 'nuppFinal.views.accomodation', name='accomodation'),
+    url(r'^contactus/', 'nuppFinal.views.contactus', name='contactus'),
+    url(r'^travel/', 'nuppFinal.views.travel', name='travel'),
     url(r'^register/', include('register.urls')),
     url(r'^uploadAbstract/', include('uploadAbstract.urls')),
-    url(r'^$', 'nuppfinal.views.index', name='index'),
+    url(r'^$', 'nuppFinal.views.index', name='index'),
 
                        ]
 

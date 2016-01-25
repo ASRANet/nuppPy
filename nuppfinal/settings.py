@@ -52,14 +52,14 @@ MIDDLEWARE_CLASSES = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'nuppfinal.urls'
+ROOT_URLCONF = 'nuppFinal.urls'
 
-basepath = 'nuclearpowerplantconference.com/kunden/homepages/13/d609847479/htdocs/www/www'
+basepath = 'nuclearpowerplantconference.com/kunden/homepages/13/d609847479/htdocs/www/'
 
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': basepath + '/nuppPy/templates'
+        'DIRS': basepath + '/nuppFinal/templates'
         ,
         'APP_DIRS': True,
         'OPTIONS': {
@@ -73,7 +73,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'nuppfinal.wsgi.application'
+WSGI_APPLICATION = 'nuppFinal.wsgi.application'
 
 
 # Database
@@ -111,7 +111,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'GMT'
+TIME_ZONE = 'UTC'
 
 USE_I18N = True
 
